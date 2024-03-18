@@ -223,9 +223,9 @@
 
         <!-- Page edit-group -->
         <div class="container px-4 py-4" id="edit-item">
-          <form class="needs-validation">
+          <form class="needs-validation" id="formValidate">
             <h2 class="pb-2 border-bottom">Edit details of a music group
-              <button class="btn btn-primary-outline" type="submit">
+              <button class="btn btn-primary-outline" type="submit" id="btnValidate">
                 <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#save"/></svg>
               </button>
               <button class="btn btn-primary-outline" type="submit">
@@ -256,7 +256,7 @@
                       </div>
                       <div class="col-sm-6">
                           <label for="established" class="form-label">Established Year</label>
-                          <input type="text" class="form-control" id="established" value="1973">
+                          <input type="text" class="form-control" id="established" value="1973" required>
                           <div class="invalid-feedback">You must provide a year.</div>
                       </div>
                   </div>
@@ -276,8 +276,9 @@
                       </div>
                       <div class="collapse row mb-2 text-center" id="collapseAddArtist">                           
                         <div class="form-floating col-md-5 themed-grid-col">
-                          <input type="text" class="form-control" id="firstName"/>
+                          <input type="text" class="form-control" id="firstName" required/>
                           <label for="firstName">first name</label>
+                          <div class="invalid-feedback">You must provide a first name.</div>
                         </div>
                         <div class="form-floating col-md-5 themed-grid-col">
                           <input type="text" class="form-control" id="lastName"/>
@@ -707,5 +708,6 @@
       <!-- SeidoAB script helpers -->
       <script src="./script/seido/modals.js"></script>
       <script src="./script/seido/select-list-items.js"></script>
+      <script src="./script/seido/validate.js"></script>
     </body>
 </html>
