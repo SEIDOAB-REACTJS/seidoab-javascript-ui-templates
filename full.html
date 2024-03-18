@@ -3,24 +3,18 @@
     <!-- Part of page Frame -->
     <!-- html-head with all resources -->
     <head>
-        <!--From index.cshtml-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Martin Lenart, Seido AB">
     
-        <!-- Modified from index.cshtml-->
-        <title>Simple Static</title>
+        <title>Seido Full template</title>
     
-        <!--From index.cshtml-->
         <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
         <link rel="manifest" href="./favicon_io/site.webmanifest">
-    
-    
-        <!--From index.cshtml-->
-    
+        
         <!-- Bootstrap styles from their respective templates -->
         <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet">
         <link href="./css/bootstrap/navbars-offcanvas.css" rel="stylesheet">
@@ -55,23 +49,30 @@
       <div class="container">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                <span class="fs-4">Music Razorpage example</span>
+                <span class="fs-4">Seido full template</span>
             </a>
 
             <ul class="nav nav-pills">
-                <li class="nav-item"><a href="#home" class="nav-link" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="#list-of-groups" class="nav-link" aria-current="list-of-groups">Famous groups</a></li>
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#list-of-items" class="nav-link">List of items</a></li>
+                <li class="nav-item"><a href="#view-item" class="nav-link">View item</a></li>
+                <li class="nav-item"><a href="#edit-item" class="nav-link">Edit item</a></li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Studies
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    Others
                   </a>
                   <ul class="dropdown-menu">
+                    <li class="nav-item"><a href="#seed" class="nav-link">Seed</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
                     <li class="nav-item"><a href="#page-handlers" class="nav-link">PageHandlers</a></li>
                     <li class="nav-item"><a href="#modals" class="nav-link">Modals</a></li>                    
                     <li>
                       <hr class="dropdown-divider">
                     </li>
-                    <li class="nav-item"><a href="#seed" class="nav-link">Seed</a></li>
+                    <li class="nav-item"><a href="#register" class="nav-link">Register</a></li>
+                    <li class="nav-item"><a href="#sign-in" class="nav-link">Sign in</a></li>                    
                   </ul>
                 </li>
             </ul>
@@ -85,20 +86,19 @@
         <div class="container px-4 py-4" id="home">
           <div class="bg-body-tertiary p-5 rounded">
             <div class="col-sm-8 py-5 mx-auto">
-              <h1 class="display-5 fw-normal">Welcome to Music Razorpage example</h1>
-                <p class="fs-5">This example is part of the ASP.NET Web Development course, and shows how to combine ASP.NET MVC, Razorpages, which is C# and .NET backend, 
-                  with css and javascript from Bootstrap in the frontend.</p>
+              <h1 class="display-5 fw-normal">Welcome to full template</h1>
+                <p class="fs-5">This is a set of page templates using bootstrap giving example of
+                  of a modern adaptable UI for some common page needs. Simply use and modify the page 
+                  container you need.
+                </p>
               
                 <p>I also use favicon. Enjoy!</p>
-                <p>
-                  <a class="btn btn-primary" href="https://goodfriends.azurewebsites.net/swagger/index.html" role="button">Do you remember the WebApi?</a>
-                </p>
             </div>
           </div>
         </div>
 
         <!-- Page List of groups -->
-        <div class="container px-4 py-4" id="list-of-groups">
+        <div class="container px-4 py-4" id="list-of-items">
           <h2 class="pb-2 border-bottom">List of Music bands</h2>
   
           <p>Below are some of the worlds most famous Music bands.</p>
@@ -166,9 +166,9 @@
         </div>
 
         <!-- Page view-group -->
-        <div class="container px-4 py-4" id="view-group">
+        <div class="container px-4 py-4" id="view-item">
           <h2 class="pb-2 border-bottom">View details of a music group
-            <a href="#edit-group"  >
+            <a href="#edit-item"  >
               <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#edit"/></svg>
             </a>
           </h2>
@@ -178,19 +178,19 @@
                     <div class="row g-3">
                         <div class="col-sm-6">
                             <label for="groupName" class="form-label">GroupName</label>
-                            <input type="text" class="form-control" id="groupName" value="AC/DC" required>
+                            <input type="text" class="form-control" id="groupName" value="AC/DC" readonly>
                         </div>
 
                         <div class="col-sm-6">
                             <label for="genre" class="form-label">Genre</label>
-                            <input type="text" class="form-control" id="genre" value="Rock" required>
+                            <input type="text" class="form-control" id="genre" value="Rock" readonly>
                         </div>
 
                         <div class="col-sm-6">
                         </div>
                         <div class="col-sm-6">
                             <label for="established" class="form-label">Established Year</label>
-                            <input type="text" class="form-control" id="established" value="1973">
+                            <input type="text" class="form-control" id="established" value="1973" readonly>
                         </div>
                     </div>
                     <div class="row g-1">
@@ -222,8 +222,8 @@
         </div>
 
         <!-- Page edit-group -->
-        <div class="container px-4 py-4" id="edit-group">
-          <form class="needs-validation" novalidate>
+        <div class="container px-4 py-4" id="edit-item">
+          <form class="needs-validation">
             <h2 class="pb-2 border-bottom">Edit details of a music group
               <button class="btn btn-primary-outline" type="submit">
                 <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#save"/></svg>
@@ -240,6 +240,7 @@
                       <div class="col-sm-6">
                           <label for="groupName" class="form-label">GroupName</label>
                           <input type="text" class="form-control" id="groupName" value="AC/DC" required>
+                          <div class="invalid-feedback">You must provide a groupname.</div>
                       </div>
 
                       <div class="col-sm-6">
@@ -256,6 +257,7 @@
                       <div class="col-sm-6">
                           <label for="established" class="form-label">Established Year</label>
                           <input type="text" class="form-control" id="established" value="1973">
+                          <div class="invalid-feedback">You must provide a year.</div>
                       </div>
                   </div>
                   <div class="row g-1">
@@ -681,28 +683,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Modal with submit OK button within a form 
-      <div class="modal fade" id="submitModal" tabindex="-1" aria-labelledby="softModalLabel" aria-hidden="true">
-        <form method="post" class="needs-validation" novalidate>
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title text-danger" id="softModalLabel">Confirm deletion</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                Hello from modal
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <button type="submit" class="btn btn-primary btn-danger">Ok</button>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-      -->
 
       <!-- Part of page Frame -->
       <!-- Footer with copyright notice -->
